@@ -3,299 +3,429 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siddharth Suchak — Head of Strategy &amp; Corporate Affairs</title>
-<meta name="description" content="Siddharth Suchak is a business and corporate affairs professional based in Mumbai, focused on strategy, fundraising, operations, and organizational growth at Bimakart.">
+<title>Siddharth Suchak — Professional Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
   :root{
-    --ink: #14212F;
-    --paper: #F9F8F4;
-    --paper-dim: #F1EFE8;
-    --brass: #8B6A31;
-    --slate: #5B6472;
-    --rule: #D8D4C9;
+    --paper:#FAFAF8;
+    --panel:#F1EFE9;
+    --ink:#1D1F23;
+    --slate:#565C66;
+    --navy:#161E2E;
+    --navy-2:#212C41;
+    --gold:#94793F;
+    --gold-light:#B79A5D;
+    --line:#DEDACD;
   }
-
-  *{ box-sizing: border-box; }
-
-  html{ scroll-behavior: smooth; }
-
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.65;
+    font-size:16px;
   }
-
-  a{ color: var(--brass); }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--brass);
-    outline-offset: 3px;
-  }
-
-  .sheet{
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
-  /* Letterhead header */
-  header{
-    border-bottom: 1px solid var(--ink);
-    padding: 56px 0 28px;
-  }
-
+  ::selection{background:var(--gold-light);color:#fff;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:'Fraunces', serif; margin:0; color:var(--ink); font-weight:600;}
   .eyebrow{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--slate);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 34px;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-size:.68rem;
+    color:var(--gold);
   }
 
-  h1{
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(2.4rem, 6vw, 3.4rem);
-    line-height: 1.05;
-    margin: 0 0 10px;
-    letter-spacing: -0.01em;
+  .layout{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    min-height:100vh;
+  }
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;}
   }
 
-  .role{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brass);
+  /* ============ SIDEBAR ============ */
+  aside{
+    background:var(--navy);
+    color:#EDEEF0;
+    padding:3.4rem 2.6rem;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    overflow-y:auto;
+  }
+  @media (max-width:900px){
+    aside{position:relative; height:auto; padding:2.6rem 6vw;}
+  }
+  aside .name{
+    font-size:2.1rem;
+    line-height:1.12;
+    color:#fff;
+  }
+  aside .title{
+    font-family:'Inter', sans-serif;
+    font-weight:500;
+    font-size:.95rem;
+    color:var(--gold-light);
+    margin-top:.7rem;
+    letter-spacing:.01em;
+  }
+  aside .rule{
+    height:1px;
+    background:rgba(237,238,240,0.18);
+    margin:2rem 0;
+    border:none;
+  }
+  .meta-list div{margin-bottom:1.2rem;}
+  .meta-list .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.66rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#8B93A3;
+    margin-bottom:.25rem;
+  }
+  .meta-list .v{font-size:.92rem; color:#EDEEF0;}
+  .meta-list a.v:hover{color:var(--gold-light);}
+
+  .side-block-title{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#8B93A3;
+    margin-bottom:1rem;
+  }
+  .skill-bars div{margin-bottom:1rem;}
+  .skill-bars .label-row{display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.4rem; color:#D6D9DE;}
+  .skill-bars .label-row span:last-child{font-family:'IBM Plex Mono', monospace; font-size:.64rem; color:#8B93A3; text-transform:uppercase;}
+  .bar-track{height:4px; background:rgba(237,238,240,0.14); border-radius:2px; overflow:hidden;}
+  .bar-fill{height:100%; background:var(--gold-light); border-radius:2px;}
+
+  .lang-row{display:flex; justify-content:space-between; font-size:.88rem; padding:.5rem 0; border-bottom:1px solid rgba(237,238,240,0.1); color:#EDEEF0;}
+  .lang-row em{font-style:normal; font-family:'IBM Plex Mono', monospace; font-size:.62rem; color:#8B93A3; text-transform:uppercase;}
+
+  /* ============ MAIN ============ */
+  main{padding:4.6rem 6vw 2rem;}
+  @media (max-width:900px){ main{padding:3rem 6vw 2rem;} }
+
+  .summary{
+    max-width:72ch;
+    font-size:1.06rem;
+    color:var(--slate);
+    padding-bottom:3rem;
+    margin-bottom:3.4rem;
+    border-bottom:1px solid var(--line);
+  }
+  .summary .eyebrow{display:block; margin-bottom:1rem;}
+  .summary p{margin:0 0 .9rem;}
+  .summary p:last-child{margin-bottom:0;}
+
+  section{margin-bottom:4.6rem;}
+  .section-head{
+    display:flex; align-items:baseline; gap:1rem; margin-bottom:2.4rem;
+  }
+  .section-head h2{font-size:clamp(1.5rem,2.6vw,1.9rem);}
+  .section-head .eyebrow{margin-left:auto; text-align:right;}
+
+  /* timeline */
+  .timeline{
+    position:relative;
+    max-width:860px;
+    padding-left:120px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute; left:96px; top:8px; bottom:8px; width:1px;
+    background:var(--line);
+  }
+  .role-block{
+    position:relative;
+    padding-bottom:2.6rem;
+    margin-bottom:2.6rem;
+    border-bottom:1px solid var(--line);
+  }
+  .role-block:last-child{border-bottom:none; margin-bottom:0;}
+  .role-block .years{
+    position:absolute; left:-120px; top:.2rem; width:100px; text-align:right;
+    font-family:'IBM Plex Mono', monospace; font-size:.74rem; color:var(--slate);
+  }
+  .role-block::after{
+    content:"";
+    position:absolute; left:-24px; top:.35rem;
+    width:8px; height:8px; background:var(--gold);
+  }
+  .role-block .role{font-size:1.2rem; margin-bottom:.15rem;}
+  .role-block .org{
+    font-family:'IBM Plex Mono', monospace; font-size:.74rem; color:var(--gold);
+    text-transform:uppercase; letter-spacing:.05em; margin-bottom:.9rem;
+  }
+  .role-block .scope{color:var(--slate); font-size:.95rem; margin:0 0 .9rem; max-width:60ch;}
+  .role-block ul{margin:0; padding-left:1.15rem;}
+  .role-block li{margin-bottom:.4rem; font-size:.95rem;}
+  .figure-row{margin-top:1rem; display:flex; flex-wrap:wrap; gap:.5rem;}
+  .figure{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--navy-2);
+    padding:.25rem .6rem;
+    border-radius:2px;
+  }
+  @media (max-width:640px){
+    .timeline{padding-left:74px;}
+    .timeline::before{left:56px;}
+    .role-block .years{left:-74px; width:56px;}
+    .role-block::after{left:-24px;}
   }
 
-  .role::before{ content: "— "; color: var(--rule); }
+  /* company snapshot */
+  .snapshot{
+    background:var(--navy);
+    color:#EDEEF0;
+    padding:3.4rem;
+    border-radius:4px;
+  }
+  @media (max-width:640px){ .snapshot{padding:2.2rem 1.6rem;} }
+  .snapshot .section-head{border-bottom:1px solid rgba(237,238,240,0.15); padding-bottom:1.4rem;}
+  .snapshot h2{color:#fff;}
+  .snapshot p.lead{color:#C6CCD6; max-width:68ch; margin:0 0 2.4rem;}
+  .verticals{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.2rem;}
+  .vertical-card{border:1px solid rgba(237,238,240,0.16); padding:1.4rem; border-radius:3px;}
+  .vertical-card h3{font-size:1.05rem; color:var(--gold-light); margin-bottom:.5rem;}
+  .vertical-card p{color:#C6CCD6; font-size:.88rem; margin:0;}
+  .stat-strip{display:flex; gap:2.8rem; flex-wrap:wrap; margin-top:2.4rem; padding-top:2rem; border-top:1px solid rgba(237,238,240,0.15);}
+  .stat-strip b{display:block; font-family:'Fraunces',serif; font-size:1.9rem; color:#fff;}
+  .stat-strip span{font-family:'IBM Plex Mono', monospace; font-size:.68rem; color:#8B93A3; text-transform:uppercase; letter-spacing:.05em;}
 
-  section{
-    padding: 40px 0;
-    border-bottom: 1px solid var(--rule);
+  /* personal */
+  .personal-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; max-width:960px;}
+  @media (max-width:720px){ .personal-grid{grid-template-columns:1fr;} }
+  .p-card{border:1px solid var(--line); padding:1.8rem; border-radius:3px; background:var(--panel);}
+  .p-card h3{font-size:1.1rem; margin-bottom:.7rem;}
+  .p-card p{color:var(--slate); font-size:.94rem; margin:0 0 1.1rem;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:.45rem;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:.68rem;
+    border:1px solid var(--gold); color:var(--gold);
+    padding:.2rem .55rem; border-radius:20px; text-transform:uppercase; letter-spacing:.04em;
   }
 
-  section:last-of-type{ border-bottom: none; }
-
-  .label{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--slate);
-    margin: 0 0 18px;
-  }
-
-  .lede{
-    font-size: 1.08rem;
-    max-width: 62ch;
-  }
-
-  .lede strong{ font-weight: 600; }
-
-  .grid-two{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  @media (max-width: 620px){
-    .grid-two{ grid-template-columns: 1fr; gap: 32px; }
-  }
-
-  .tags{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .tags li{
-    font-size: 13px;
-    padding: 6px 12px;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    color: var(--ink);
-    background: var(--paper-dim);
-  }
-
-  .themes{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .themes li{
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 14px;
-    font-size: 0.98rem;
-    color: var(--ink);
-  }
-
-  .themes li::before{
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: var(--brass);
-  }
-
-  .highlight{
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 18px;
-    padding: 18px 0;
-    border-top: 1px solid var(--rule);
-  }
-
-  .highlight:first-of-type{ border-top: none; }
-
-  .highlight .tag{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--slate);
-    padding-top: 3px;
-  }
-
-  @media (max-width: 500px){
-    .highlight{ grid-template-columns: 1fr; gap: 4px; }
-  }
-
-  /* Signature block footer */
   footer{
-    padding: 44px 0 64px;
+    border-top:1px solid var(--line);
+    padding:2.6rem 6vw 3rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+    font-size:.85rem; color:var(--slate);
   }
-
-  .sig-line{
-    border-top: 1px solid var(--ink);
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-  }
-
-  .sig-line a{
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--brass);
-  }
-
-  .sig-line a:hover{ color: var(--brass); }
-
-  .location{
-    color: var(--slate);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    margin-top: 8px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior: auto; }
-  }
+  footer .f-name{font-family:'Fraunces', serif; color:var(--ink); font-size:1.05rem;}
+  footer .f-links a{border-bottom:1px solid var(--line); margin-right:1.2rem; padding-bottom:2px;}
+  footer .f-links a:hover{border-color:var(--gold); color:var(--gold);}
 </style>
 </head>
 <body>
+<div class="layout">
 
-<div class="sheet">
-
-  <header>
-    <div class="eyebrow">
-      <span>Professional Profile</span>
-      <span>Mumbai, India</span>
+  <aside>
+    <div class="name">Siddharth<br>Suchak</div>
+    <div class="title">Head of Strategy, Incio Fintech Private Limited</div>
+    <hr class="rule">
+    <div class="meta-list">
+      <div><div class="k">Location</div><div class="v">Mumbai, India</div></div>
+      <div><div class="k">Sector</div><div class="v">Insurtech &amp; Financial Strategy</div></div>
+      <div><div class="k">Experience Since</div><div class="v">2022</div></div>
+      <div><div class="k">Phone</div><a class="v" href="tel:+919167343292">+91 91673 43292</a></div>
+      <div><div class="k">Email</div><a class="v" href="mailto:Sidsuchak16@gmail.com">Sidsuchak16@gmail.com</a></div>
+      <div><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/siddharth-suchak-204998176" target="_blank" rel="noopener">siddharth-suchak-204998176</a></div>
     </div>
-    <h1>Siddharth Suchak</h1>
-    <div class="role">Head of Strategy and Corporate Affairs, Bimakart</div>
-  </header>
+    <hr class="rule">
+    <div class="side-block-title">Core Competencies</div>
+    <div class="skill-bars">
+      <div><div class="label-row"><span>Strategic Planning</span><span>Experienced</span></div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+      <div><div class="label-row"><span>Organizational Skills</span><span>Experienced</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+      <div><div class="label-row"><span>Problem-Solving</span><span>Experienced</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+      <div><div class="label-row"><span>Project Management</span><span>Experienced</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+      <div><div class="label-row"><span>Decision Making</span><span>Skillful</span></div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+      <div><div class="label-row"><span>Process Improvement</span><span>Skillful</span></div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
+      <div><div class="label-row"><span>Analytical Thinking</span><span>Skillful</span></div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div>
+      <div><div class="label-row"><span>Salesforce.com</span><span>Skillful</span></div><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div></div>
+    </div>
+    <hr class="rule">
+    <div class="side-block-title">Languages</div>
+    <div class="lang-row"><span>Hindi</span><em>Native</em></div>
+    <div class="lang-row"><span>English</span><em>Fluent</em></div>
+    <div class="lang-row"><span>Gujarati</span><em>Fluent</em></div>
+  </aside>
 
-  <section>
-    <p class="label">Profile</p>
-    <p class="lede">Siddharth Suchak is a business and corporate affairs professional based in Mumbai, with a background in finance and management. He is associated with <strong>Bimakart</strong>, where he focuses on corporate affairs, strategic partnerships, fundraising, business operations, and organizational growth. He holds an <strong>MBA from ICFAI Business School</strong> and has built his career around scaling businesses, leadership, and operational execution.</p>
-  </section>
+  <main>
 
-  <section>
-    <div class="grid-two">
-      <div>
-        <p class="label">Areas of Expertise</p>
-        <ul class="tags">
-          <li>Corporate Affairs</li>
-          <li>Business Strategy</li>
-          <li>Fundraising &amp; Investor Relations</li>
-          <li>Operations &amp; Process Improvement</li>
-          <li>Leadership Development</li>
-          <li>HR &amp; Organizational Growth</li>
-          <li>Business Development &amp; Partnerships</li>
-          <li>Startup Scaling &amp; Execution</li>
-        </ul>
+    <div class="summary">
+      <span class="eyebrow">Professional Summary</span>
+      <p>Strategy and finance leader with a track record spanning corporate affairs, investor relations, and regulatory compliance in the fintech and insurance sectors.</p>
+      <p>Currently oversees Finance &amp; Accounts, Strategy, Investor Relations, and Corporate Affairs — including regulatory compliance — at Incio Fintech, the parent company of Bimakart.</p>
+    </div>
+
+    <section id="journey">
+      <div class="section-head">
+        <h2>Professional Trajectory</h2>
+        <div class="eyebrow">Education &amp; Career</div>
       </div>
-      <div>
-        <p class="label">Writes &amp; Speaks On</p>
-        <ul class="tags">
-          <li>Leadership &amp; People Management</li>
-          <li>High-Performing Teams</li>
-          <li>Startup Growth</li>
-          <li>Workplace Culture</li>
-          <li>HR Best Practices</li>
-          <li>Career Development</li>
-        </ul>
+
+      <div class="timeline">
+
+        <div class="role-block">
+          <div class="years">2015–17</div>
+          <div class="role">Higher Secondary (12th)</div>
+          <div class="org">BSGD Junior College, Mumbai</div>
+          <p class="scope">Completed higher secondary education in the Commerce stream.</p>
+        </div>
+
+        <div class="role-block">
+          <div class="years">2017–20</div>
+          <div class="role">Bachelor of Commerce</div>
+          <div class="org">University of Mumbai</div>
+          <ul>
+            <li>Completed undergraduate degree in Commerce.</li>
+            <li>Elected Chairperson, 2020 — led a student body and coordinated stakeholders.</li>
+          </ul>
+        </div>
+
+        <div class="role-block">
+          <div class="years">2021–23</div>
+          <div class="role">PGPM, Finance</div>
+          <div class="org">ICFAI University, Mumbai</div>
+          <p class="scope">Postgraduate management programme spanning marketing and finance.</p>
+        </div>
+
+        <div class="role-block">
+          <div class="years">Mar–Jun 2022</div>
+          <div class="role">Finance Intern</div>
+          <div class="org">Wealth Fincare, Mumbai</div>
+          <ul>
+            <li>Opened 60+ demat accounts through direct sales.</li>
+            <li>Handled escalations and objection resolution for a five-member team.</li>
+            <li>Tracked team attendance and performance records.</li>
+          </ul>
+        </div>
+
+        <div class="role-block">
+          <div class="years">Dec 22–Oct 23</div>
+          <div class="role">Financial Strategy Manager</div>
+          <div class="org">Incio Fintech Pvt. Ltd.</div>
+          <ul>
+            <li>Designed and implemented the company's monthly financial reconciliation methodology.</li>
+            <li>Analysed financial data to identify trends and inform senior management decisions.</li>
+            <li>Implemented cost-saving measures that improved profitability.</li>
+            <li>Managed a team while ensuring regulatory compliance.</li>
+          </ul>
+        </div>
+
+        <div class="role-block">
+          <div class="years">Oct 23–Mar 24</div>
+          <div class="role">Head of Corporate Affairs</div>
+          <div class="org">Incio Fintech Pvt. Ltd.</div>
+          <ul>
+            <li>Led fundraising efforts and closed a key funding round with investors.</li>
+            <li>Maintained ongoing investor communications on performance and direction.</li>
+            <li>Directed Use Cases, BRDs, and FRDs for new product requirements.</li>
+            <li>Coordinated API integrations for the company's fintech services.</li>
+            <li>Established and onboarded a new lending partner.</li>
+          </ul>
+        </div>
+
+        <div class="role-block">
+          <div class="years">Apr 24–Present</div>
+          <div class="role">Head of Strategy</div>
+          <div class="org">Incio Fintech Pvt. Ltd.</div>
+          <p class="scope">Currently oversees Finance &amp; Accounts, Strategy, Investor Relations, and Corporate Affairs — including regulatory compliance — for Bimakart's dual-channel insurance distribution business.</p>
+          <ul>
+            <li>Manages share issuance and allotment processes.</li>
+            <li>Ensures compliance with RBI and IRDAI guidelines.</li>
+            <li>Established new departments and defined their SOPs.</li>
+            <li>Implemented insuretech solutions to streamline policy issuance and claims.</li>
+            <li>Automated payment reconciliation processes.</li>
+          </ul>
+          <div class="figure-row">
+            <span class="figure">25% revenue growth</span>
+            <span class="figure">20% client acquisition lift</span>
+            <span class="figure">25% more accurate reconciliation</span>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <p class="label">Operating Philosophy</p>
-    <ul class="themes">
-      <li>Leaders should empower people rather than micromanage.</li>
-      <li>Sustainable growth comes from scalable processes, not just increasing headcount.</li>
-      <li>A healthy workplace culture drives long-term business success.</li>
-      <li>Great managers create future leaders.</li>
-      <li>Operations become a competitive advantage when aligned with people and systems.</li>
-      <li>Trust, ownership, and accountability are essential to organizational success.</li>
-    </ul>
-  </section>
+    <section class="snapshot">
+      <div class="section-head">
+        <h2>Where the Work Lives</h2>
+        <div class="eyebrow">Incio Fintech · Bimakart</div>
+      </div>
+      <p class="lead">Incio Fintech Private Limited is the parent company of Bimakart, an IRDAI-registered Corporate Agent (CA1018) distributing insurance across India via local entrepreneurs and technology.</p>
+      <div class="verticals">
+        <div class="vertical-card">
+          <h3>Bimakart.in</h3>
+          <p>The consumer-facing platform — motor, health, life, and commercial insurance with EMI options and instant digital issuance.</p>
+        </div>
+        <div class="vertical-card">
+          <h3>Bimakart.ie</h3>
+          <p>A B2B2C insurance layer enabling corporate partners to offer insurance without building their own infrastructure.</p>
+        </div>
+        <div class="vertical-card">
+          <h3>Bimakartcenter.in</h3>
+          <p>The franchisee network — a pan-India footprint operating alongside the POSP agent channel.</p>
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div><b>2</b><span>Distribution Channels</span></div>
+        <div><b>4</b><span>Insurance Lines</span></div>
+        <div><b>CA1018</b><span>IRDAI Registration</span></div>
+      </div>
+    </section>
 
-  <section>
-    <p class="label">Recent Highlights</p>
+    <section id="personal">
+      <div class="section-head">
+        <h2>Beyond the Boardroom</h2>
+        <div class="eyebrow">Family Enterprise &amp; Interests</div>
+      </div>
+      <div class="personal-grid">
+        <div class="p-card">
+          <h3>Bhakti Caterers</h3>
+          <p>Supports Bhakti Caterers, his family's Mumbai-based wedding and event catering business — marketing materials, website, and brand communications, including creative content rooted in Gujarati wedding traditions.</p>
+          <div class="tag-row">
+            <span class="tag">Marketing</span>
+            <span class="tag">Web &amp; Brand</span>
+            <span class="tag">Gujarati Lyrics</span>
+          </div>
+        </div>
+        <div class="p-card">
+          <h3>Bike Riding &amp; Events</h3>
+          <p>Maintains an active interest in bike riding and in event management and planning, tracing back to his collegiate leadership experience.</p>
+          <div class="tag-row">
+            <span class="tag">Bike Riding</span>
+            <span class="tag">Event Management</span>
+            <span class="tag">Event Planning</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="highlight">
-      <span class="tag">Scale</span>
-      <p>Shared insights on scaling organizations from small teams to 100+ employees through structured operations and people processes.</p>
-    </div>
-
-    <div class="highlight">
-      <span class="tag">Insurance</span>
-      <p>Led Bimakart's implementation of a large-scale Group Personal Accident and Wellness Benefit Plan covering approximately 63,000 employees for a state transport cooperative bank, in partnership with Zuno General Insurance.</p>
-    </div>
-
-    <div class="highlight">
-      <span class="tag">Writing</span>
-      <p>Published articles on leadership, focused on empowering teams, building trust, and effective management practices.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="sig-line">
-      <a href="mailto:Siddharthsuchak16@gmail.com">Siddharthsuchak16@gmail.com</a>
-      <a href="https://www.linkedin.com/in/siddharth-suchak-204998176" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-    <p class="location">Siddharth Suchak — Mumbai, India</p>
-  </footer>
-
+  </main>
 </div>
+
+<footer>
+  <div class="f-name">Siddharth Suchak — Head of Strategy, Incio Fintech Pvt. Ltd.</div>
+  <div class="f-links">
+    <a href="tel:+919167343292">+91 91673 43292</a>
+    <a href="mailto:Sidsuchak16@gmail.com">Sidsuchak16@gmail.com</a>
+    <a href="https://www.linkedin.com/in/siddharth-suchak-204998176" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
 
 </body>
 </html>
