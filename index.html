@@ -112,6 +112,94 @@
     margin-top:.35rem;
   }
 
+  /* ---------- HERO LAYOUT + PORTRAIT ---------- */
+  .hero-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:3rem;
+    flex-wrap:wrap;
+  }
+  .hero-text{flex:1 1 480px; min-width:0;}
+  .portrait{
+    flex:0 0 auto;
+    width:220px;
+  }
+  .portrait .frame{
+    width:220px;
+    height:270px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:repeating-linear-gradient(135deg, var(--paper-dim) 0 10px, var(--paper) 10px 20px);
+    position:relative;
+  }
+  .portrait .frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(35%);
+  }
+  .portrait .frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border:1px solid rgba(20,25,26,.5);
+    pointer-events:none;
+  }
+  .portrait .cap{
+    margin-top:.8rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#5b5f57;
+    display:flex;
+    justify-content:space-between;
+  }
+  .portrait .cap span:last-child{color:var(--brass);}
+  @media (max-width:700px){
+    .portrait{width:160px;}
+    .portrait .frame{width:160px; height:195px;}
+  }
+
+  /* ---------- GALLERY STRIP ---------- */
+  .gallery{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 8vw 6rem;
+  }
+  .gallery .g-row{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:1.5rem;
+  }
+  .gallery figure{
+    margin:0;
+    border:1px solid var(--line);
+    background:repeating-linear-gradient(135deg, var(--paper-dim) 0 10px, var(--paper) 10px 20px);
+  }
+  .gallery figure img{
+    width:100%;
+    height:100%;
+    min-height:260px;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(30%);
+  }
+  .gallery figcaption{
+    padding:.9rem 1.1rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ledger);
+    border-top:1px solid var(--line);
+  }
+  @media (max-width:700px){
+    .gallery .g-row{grid-template-columns:1fr;}
+  }
+
   /* ---------- SECTION LABEL ---------- */
   .section-head{
     padding:5rem 8vw 1rem;
@@ -304,14 +392,25 @@
 <body>
 
 <section class="hero">
-  <div class="eyebrow">Bio &amp; Career Portfolio</div>
-  <h1>From ledger entries<br><em>to</em> the boardroom.</h1>
-  <p class="lede">
-    In December 2022, I joined Bimakart as a fresher — its Financial Strategy Manager on a
-    team of fifteen. What began with reconciling insurance commissions has become a seat at
-    the table shaping the direction of a company now built up to a ₹300 crore insurance
-    distribution platform. This is that journey, in the order it happened.
-  </p>
+  <div class="hero-top">
+    <div class="hero-text">
+      <div class="eyebrow">Career Portfolio</div>
+      <h1>From MBA fresher<br><em>to</em> the founding member </h1>
+      <p class="lede">
+        In December 2022, I joined Bimakart as a fresher — its Financial Strategy Manager on a
+        team of fifteen. What began with reconciling insurance commissions has become a seat at
+        the table shaping the direction of a company now built up to a ₹300 crore insurance
+        distribution platform. This is that journey, in the order it happened.
+      </p>
+    </div>
+    <div class="portrait">
+      <div class="frame">
+        <!-- Replace photo-1.jpg with your headshot. Keep the file in the same folder as this HTML file. -->
+        <img src="./index_files/photo-1.jpeg" alt="Siddharth — headshot">
+      </div>
+      <div class="cap"><span>SIDDHARTH</span><span>PHOTO 01</span></div>
+    </div>
+  </div>
   <div class="stat-row">
     <div class="stat"><div class="num">15 <span>→ 120+ </span></div><div class="lbl">Team of 15 to 120+ a ₹300 Cr Company</div></div>
     <div class="stat"><div class="num">₹<span>15L</span></div><div class="lbl">Recovered in Year One</div></div>
@@ -427,6 +526,21 @@ I lead corporate strategy, compliance, financial planning and forecasting, inves
     </div>
   </div>
 </div>
+
+<section class="gallery">
+  <div class="g-row">
+    <figure>
+      <!-- Replace photo-2.jpg with an image from the office, team, or a work moment -->
+      <img src="./index_files/D8EC217B-1AC0-4D57-BDB2-3B7DCC216054.jpeg" alt="Bimakart — team and workspace">
+      <figcaption>Photo 02 — Building the team</figcaption>
+    </figure>
+    <figure>
+      <!-- Replace photo-3.jpg with another relevant photo (e.g. an event, launch, or investor meeting) -->
+      <img src="./index_files/984A858B-CF5A-42EB-824F-BA90F5B6E53B.jpeg" alt="Bimakart — a milestone moment">
+      <figcaption>Photo 03 — A milestone along the way</figcaption>
+    </figure>
+  </div>
+</section>
 
 <section class="taught">
   <div class="tag">In Their Own Words</div>
