@@ -1,0 +1,62 @@
+rules_version = '2';
+// Paste into Firebase console → Firestore Database → Rules → Publish.
+// EDIT the two marked lines (domain + admin emails) to match config.js.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function emailOk() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower().matches('.*@yourcompany[.]com$');   // <-- EDIT domain (keep [.] for dots)
+    }
+    function isAdmin() {
+      return emailOk() && request.auth.token.email.lower() in [
+        'siddharth@yourcompany.com'                                              // <-- EDIT admin emails
+      ];
+    }
+    function cfg() {
+      return exists(/databases/$(database)/documents/config/settings)
+        ? get(/databases/$(database)/documents/config/settings).data
+        : {'accountants': [], 'heads': []};
+    }
+    function isAcct() {
+      return emailOk() && (request.auth.uid in cfg().get('accountants', [])
+        || (cfg().get('accountants', []).size() == 0 && isAdmin()));
+    }
+    function isHead() {
+      return emailOk() && (request.auth.uid in cfg().get('heads', [])
+        || (cfg().get('heads', []).size() == 0 && isAdmin()));
+    }
+
+    // Directory of people (filled on each sign-in) for the manager / role pickers
+    match /users/{uid} {
+      allow read: if emailOk();
+      allow write: if emailOk() && request.auth.uid == uid;
+    }
+    // Per-person notification "last seen"
+    match /prefs/{uid} {
+      allow read, write: if emailOk() && request.auth.uid == uid;
+    }
+    // Roles + ledger list
+    match /config/{docId} {
+      allow read: if emailOk();
+      allow write: if isAdmin();
+    }
+    // Agreement register — maintained by accounts
+    match /agreements/{id} {
+      allow read: if emailOk();
+      allow create, update, delete: if isAcct() || isHead() || isAdmin();
+    }
+    // Invoices
+    match /invoices/{id} {
+      allow read: if emailOk();
+      allow create: if emailOk() && request.resource.data.uploaderId == request.auth.uid;
+      allow update: if emailOk()
+        && request.resource.data.uploaderId == resource.data.uploaderId
+        && (resource.data.uploaderId == request.auth.uid
+            || resource.data.managerId == request.auth.uid
+            || isAcct() || isHead());
+      allow delete: if false;   // keep a full audit trail; use "Cancel" in the app
+    }
+  }
+}
